@@ -1,0 +1,2 @@
+![Screenshot 2023-10-28 224624](https://github.com/gargaman17/language-translator/assets/138650449/f86ae19f-1548-48b1-8006-460dabac528b)
+The Language Translator Web Application is a user-friendly tool developed with HTML, CSS, and JavaScript, allowing users to translate text between multiple languages. Whether you need to translate a phrase, sentence, or an entire document, this application provides seamless translation capabilities.
