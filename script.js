@@ -13,6 +13,7 @@ function populateDropdown(dropdown, options) {
     dropdown.querySelector("ul").appendChild(li);
   });
 }
+// Function body
 
 populateDropdown(inputLanguageDropdown, languages);
 populateDropdown(outputLanguageDropdown, languages);
@@ -21,13 +22,15 @@ dropdowns.forEach((dropdown) => {
   dropdown.addEventListener("click", (e) => {
     dropdown.classList.toggle("active");
   });
-
+// Event listener for click event on each dropdown
+  
   dropdown.querySelectorAll(".option").forEach((item) => {
     item.addEventListener("click", (e) => {
       //remove active class from current dropdowns
       dropdown.querySelectorAll(".option").forEach((item) => {
         item.classList.remove("active");
-      });
+      }); // Event listener for click event on each dropdown option
+      
       item.classList.add("active");
       const selected = dropdown.querySelector(".selected");
       selected.innerHTML = item.innerHTML;
@@ -42,7 +45,7 @@ document.addEventListener("click", (e) => {
       dropdown.classList.remove("active");
     }
   });
-});
+}); // Event listener to close dropdowns when clicking outside
 
 const swapBtn = document.querySelector(".swap-position"),
   inputLanguage = inputLanguageDropdown.querySelector(".selected"),
@@ -54,7 +57,8 @@ swapBtn.addEventListener("click", (e) => {
   const temp = inputLanguage.innerHTML;
   inputLanguage.innerHTML = outputLanguage.innerHTML;
   outputLanguage.innerHTML = temp;
-
+// Event listener for click event on swap button
+  
   const tempValue = inputLanguage.dataset.value;
   inputLanguage.dataset.value = outputLanguage.dataset.value;
   outputLanguage.dataset.value = tempValue;
